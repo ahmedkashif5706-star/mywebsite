@@ -1,59 +1,195 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>My Personal Website</title>
+    <title>My Store</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            background: linear-gradient(135deg, #667eea, #764ba2);
             font-family: Arial;
+            background: #f0f2f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px;
             text-align: center;
-            padding: 50px;
         }
-        .card {
+        .nav {
             background: white;
-            max-width: 400px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px black;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #764ba2;
-        }
-        h1 {
+        .nav a {
             color: #333;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
         }
-        p {
-            color: gray;
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+        .section-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .product-img {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .product-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-size: 28px;
+            color: #2a5298;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
         .btn {
-            display: inline-block;
-            background: #764ba2;
+            background: #2a5298;
             color: white;
-            padding: 10px 20px;
-            margin: 10px;
-            text-decoration: none;
-            border-radius: 30px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .btn:hover {
-            background: #667eea;
+        .about {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 60px;
+        }
+        .booking-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .submit-btn {
+            background: green;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Profile Photo">
-    <h1>Mera Naam</h1>
-    <p>Main website banana seekh raha/rahi hoon 😊</p>
-    <p>HTML, CSS, aur aage JavaScript bhi seekhunga</p>
+<div class="header">
+    <h1>🛍️ My Store</h1>
+    <p>Best Products | Best Prices</p>
+</div>
+
+<div class="nav">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">About</a>
+    <a href="#">Booking</a>
+</div>
+
+<div class="container">
     
-    <a href="#" class="btn">Instagram</a>
-    <a href="#" class="btn">YouTube</a>
-    <a href="#" class="btn">GitHub</a>
+    <h2 class="section-title">✨ Our Products ✨</h2>
+    <div class="products-grid">
+        
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="product-img">📱</div>
+            <h3 class="product-title">Smart Watch</h3>
+            <p class="product-desc">Fitness tracker, heart rate, GPS</p>
+            <div class="price">$49</div>
+            <button class="btn" onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="product-img">🎧</div>
+            <h3 class="product-title">Headphones</h3>
+            <p class="product-desc">Noise cancellation, 30hr battery</p>
+            <div class="price">$79</div>
+            <button class="btn" onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="product-img">📷</div>
+            <h3 class="product-title">4K Camera</h3>
+            <p class="product-desc">Ultra HD, 20MP, professional</p>
+            <div class="price">$299</div>
+            <button class="btn" onclick="alert('Added to cart!')">Add to Cart</button>
+        </div>
+        
+    </div>
+
+    <div class="about">
+        <h2>📖 About Us</h2>
+        <p>We provide high-quality products with the best prices and fast delivery.</p>
+        <p>✅ Free Shipping | ✅ 1 Year Warranty | ✅ 24/7 Support</p>
+    </div>
+
+    <div class="booking-form">
+        <h2>📅 Book a Demo</h2>
+        <form onsubmit="alert('Booking confirmed!'); return false;">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" required>
+            <select>
+                <option>Smart Watch</option>
+                <option>Headphones</option>
+                <option>4K Camera</option>
+            </select>
+            <button class="submit-btn" type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2025 My Store | All Rights Reserved</p>
 </div>
 
 </body>
